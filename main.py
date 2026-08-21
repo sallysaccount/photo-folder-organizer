@@ -49,6 +49,19 @@ def process_files(file_path):
     # After the loop has completed, message summerizes to user
     messagebox.showinfo("Complete", f"Processed {copied_count} photos.\n" f"Skipped {skipped_count} photos due to errors.\n" f"Find your photo folders here: {desktop_path}")
 
+
+def browse_files():
+    file_path = filedialog.askopenfilenames(title="Select Photos")           # Opens window from OS to select photos from
+
+    if file_path:
+        print(f"Number of Files Dropped: {len(file_path)}")                 # Print message on consol with Drop is success
+
+        thread = threading.Thread(target=process_files, args=(file_path,))  # Run and pass the data into the function and make them ordered in a list
+        thread.start()                                                      # Start thread, running in background
+
+browse_button = ttk.Button(root, text="Browse", command=browse_files)       # Browse button option to instead of drag and drop, route to browse instead
+browse_button.pack(pady=10)                                                 # Styling to button
+
 def on_drop(event):                                                         # Run when drop occurs, event contains details of what was dropped
     file_path = root.tk.splitlist(event.data)                               # Splits string into list of separate strings
     print(f"Number of Files Dropped: {len(file_path)}")                     # Print message on consol with Drop is success
