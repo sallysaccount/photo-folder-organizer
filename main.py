@@ -3,7 +3,7 @@ import sv_ttk
 from tkinter import ttk
 from pathlib import Path
 from folder import copy_photo
-from tkinter import messagebox
+from tkinter import messagebox, filedialog
 from tkinterdnd2 import DND_FILES, TkinterDnD
 from photo_organizer import photo_organizer
 
@@ -16,7 +16,7 @@ root = TkinterDnD.Tk()                                          # Using TkinterD
 root.title("Photo Organizer")                                   # Setting window name
 root.geometry("400x400")                                        # Setting window width and height
 
-sv_ttk.set_theme("light")                                        # Found themes for styling through sv-ttk
+sv_ttk.set_theme("dark")                                        # Found themes for styling through sv-ttk
 header = ttk.Label(root, text="Photo Organizer", font=("Times New Roman", 20))
 header.pack(pady=(20,0))
 
