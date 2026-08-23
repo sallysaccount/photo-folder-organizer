@@ -5,6 +5,7 @@ Videos and files with unknown dates are handled separately, sorted into their ow
 
 This was designed to help organize photos and can be used to conveniently transfer to an external hard drive or save to the cloud.
 
+
 **Installation**
 
 **Option One:** Download the Zip File (Recommended)
@@ -20,6 +21,7 @@ cd photo-folder-organizer
 pip install -r requirements.txt
 python main.py
 
+
 **Quick Start**
 1. Drag and Drop your photos to the designated window, or click browse to select the files
    - Browse is beneficial if your device does not allow drag and drop
@@ -31,7 +33,18 @@ python main.py
 
 * Note: All files are copied, never moved. The originals are untouched
 
+
 **Output**
+
+https://github.com/user-attachments/assets/91f8c1ff-de63-4b40-8243-0517c90603f5
+
+Video showing demo of Application
+
+
+<img width="326" height="484" alt="Screenshot 2026-08-23 173642" src="https://github.com/user-attachments/assets/e3c93572-f111-408c-bc5d-903d2ce81399" />
+
+Screenshot of Summary Screen after a completed Drag and Drop
+
 
 **How it Works**
 - The user drags and drops photos and/or videos into the application, or selects them using browse
@@ -43,12 +56,14 @@ python main.py
 - Photos without a detected date are copied into a folder labeled Unknown Date
 - Duplicates and unreadable files are skipped and reported in the summary screen
 
+
 **Features**
 - Drag and Drop or Browse Button
 - Date detection using EXIF metadata and filename date parsing
 - Videos routed to their own folder (not organized by date)
 - Error Handling to detect duplicated and skip unreadable or invalid files
 - Responsive UI allowing file processing to run separately from the main UI thread
+
 
 **Built With**
 - Python
@@ -57,11 +72,13 @@ python main.py
 - Pillow for EXIF metadata reading
 - Python Libraries including pathlib, shutil, and threading
 
+
 **Future Improvements**
 - Video Metadata support
   - Videos are stored in an unsorted file due to having a different metadata then photos, would like to update this feature
 - Additional Styling
   - Would like to improve and modernize the UI
+
 
 **Notes**
 This is a solo project, used for educational purposes. 
